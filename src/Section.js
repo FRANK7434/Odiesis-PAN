@@ -1,11 +1,10 @@
 import React from 'react';
 
-export default function Section({ title, subtitle, content, children, id }) {
+export default function Section({ title, subtitle, children }) {
   return (
-    <section id={id} style={{ marginBottom: '2rem' }}>
-      <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>{title}</h2>
-      {subtitle && <p style={{ fontSize: '1.25rem' }}>{subtitle}</p>}
-      {content && <p style={{ fontSize: '1rem', color: '#555' }}>{content}</p>}
+    <section style={{ marginBottom: '2rem' }}>
+      <h2 style={{ fontSize: '1.5rem', color: '#333', marginBottom: '0.5rem' }}>{title}</h2>
+      {subtitle && <p style={{ color: '#666', marginBottom: '1rem' }}>{subtitle}</p>}
       {children}
     </section>
   );
