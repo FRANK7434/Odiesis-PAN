@@ -1,30 +1,4 @@
-// import React from 'react';
-
-// export default function TestimonialCard({ text, image }) {
-//   return (
-//     <div style={{
-//       border: '1px solid #ddd',
-//       padding: '1rem',
-//       borderRadius: '8px',
-//       textAlign: 'center',
-//       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-//     }}>
-//       <img 
-//         src={image} 
-//         alt="Client testimonial" 
-//         style={{
-//           width: '100px', 
-//           height: '100px', 
-//           borderRadius: '50%', 
-//           objectFit: 'cover', 
-//           marginBottom: '1rem'
-//         }} 
-//       />
-//       <p style={{ fontStyle: 'italic', color: '#555' }}>{text}</p>
-//     </div>
-//   );
-// }
-import React from 'react';
+ import React from 'react';
 
 export default function TestimonialCard({ text, image }) {
   return (
