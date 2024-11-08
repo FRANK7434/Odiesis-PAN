@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Section from './Section';
 import ContactCard from './ContactCard';
-import TestimonialCard from './TestimonialCard';
 import Footer from './Footer';
 
 // Importing images
@@ -13,11 +12,36 @@ import Image3 from './assets/images/WhatsApp Image 2024-10-27 at 14.34.36.jpeg';
 
 export default function App() {
   const [copiedText, setCopiedText] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = [Image1, Image2, Image3];
+  const testimonials = [
+    "Great service! Really helped me improve my grades.",
+    "Amazing support, highly recommended!",
+    "Professional and reliable assistance!"
+  ];
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopiedText(text);
     setTimeout(() => setCopiedText(null), 2000);
+  };
+
+  // Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
+    }, 2000); // Change slide every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
   };
 
   return (
@@ -86,13 +110,83 @@ export default function App() {
               buttonText="Chat on WhatsApp"
               onClick={() => window.open('https://wa.me/+19099097204', '_blank')}
             />
+            <ContactCard
+              icon="discord"
+              text="Discord"
+              buttonText="Join Discord Server"
+              onClick={() => window.open('https://discord.gg/yMVerSGf', '_blank')}
+            />
           </Section>
 
           <Section title="Client Testimonials">
-            <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-              <TestimonialCard text="Great service! Really helped me improve my grades." image={Image1} />
-              <TestimonialCard text="Amazing support, highly recommended!" image={Image2} />
-              <TestimonialCard text="Professional and reliable assistance!" image={Image3} />
+            {/* Carousel Container */}
+            <div style={{
+              position: 'relative',
+              width: 'auto',
+              height: '500px',
+              overflow: 'hidden',
+              borderRadius: '8px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              textAlign: 'center',
+            }}>
+              {/* Slide Image */}
+              <img 
+                src={images[currentSlide]} 
+                alt={`Slide ${currentSlide + 1}`} 
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                }}
+              />
+
+              {/* Testimonial Text Overlay */}
+              <div style={{
+                position: 'absolute',
+                bottom: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                color: '#fff',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontSize: '1.2rem',
+                maxWidth: '90%',
+                textAlign: 'center',
+              }}>
+                {testimonials[currentSlide]}
+              </div>
+
+              {/* Prev and Next Buttons */}
+              <button onClick={handlePrevSlide} style={{
+                position: 'absolute',
+                top: '50%',
+                left: '10px',
+                transform: 'translateY(-50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+              }}>‹</button>
+
+              <button onClick={handleNextSlide} style={{
+                position: 'absolute',
+                top: '50%',
+                right: '10px',
+                transform: 'translateY(-50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+              }}>›</button>
             </div>
           </Section>
 

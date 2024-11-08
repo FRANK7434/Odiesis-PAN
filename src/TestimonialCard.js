@@ -1,4 +1,5 @@
- import React from 'react';
+ 
+import React from 'react';
 
 export default function TestimonialCard({ text, image }) {
   return (
@@ -14,12 +15,13 @@ export default function TestimonialCard({ text, image }) {
         src={image} 
         alt="Client testimonial" 
         style={{
-          width: '100%',              // Make the image take the full width of the container
-          height: '150px',            // Set a fixed height for a uniform look
+          width: '100%',              // Take full width of the container
+          height: '250px',            // Set a fixed height for consistency
           objectFit: 'contain',       // Ensure the entire image fits without cropping
           marginBottom: '1rem',
-          borderRadius: '8px',        // Square format with slightly rounded corners
-          border: '1px solid #ddd',   // Add a subtle border for clarity
+          borderRadius: '8px',        // Slight rounding for a polished look
+          border: '1px solid #ddd',   // Subtle border for visual clarity
+          backgroundColor: '#f0f0f0', // Light background to fill empty space if needed
         }} 
       />
       <p style={{ fontStyle: 'italic', color: '#555', fontSize: '0.95rem' }}>{text}</p>
