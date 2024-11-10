@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Section from './Section';
@@ -67,13 +67,28 @@ export default function App() {
           {`
             @keyframes typewriter {
               0% { width: 0; }
-              70% { width: 100%; } /* Typing animation complete */
-              85% { width: 100%; } /* Pause to allow reading */
-              100% { width: 0; } /* Reset typing effect */
+              70% { width: 100%; }
+              85% { width: 100%; }
+              100% { width: 0; }
             }
 
             @keyframes blinkCursor {
               50% { border-color: transparent; }
+            }
+
+            /* Responsive styles for the button */
+            @media (max-width: 768px) {
+              .button-typewriter {
+                font-size: 1rem;
+                padding: 6px 12px;
+              }
+            }
+
+            @media (max-width: 480px) {
+              .button-typewriter {
+                font-size: 0.9rem;
+                padding: 4px 10px;
+              }
             }
           `}
         </style>
@@ -92,10 +107,11 @@ export default function App() {
               <main style={{ padding: '2rem 0' }}>
                 {/* Typewriter Effect Button */}
                 <button
+                  className="button-typewriter"
                   style={{
                     display: 'inline-block',
-                    padding: '10px 20px',
-                    fontSize: '1.5rem',
+                    padding: '10px 20px', // Default padding for larger screens
+                    fontSize: '1.2rem', // Default font size
                     fontWeight: 'bold',
                     color: '#fff',
                     backgroundColor: '#007bff',
