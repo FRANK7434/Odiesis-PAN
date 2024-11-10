@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Section from './Section';
@@ -15,6 +15,19 @@ import Image3 from './assets/images/WhatsApp Image 2024-10-27 at 14.34.36.jpeg';
 export default function App() {
   const [copiedText, setCopiedText] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  // Phrases to display in the text carousel
+  const phrases = ["Unlock Your Academic Potential Today!", "Tap to order now!!"];
+
+  // Cycle through phrases every 6 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 6000); // Change phrase every 6 seconds
+
+    return () => clearInterval(interval);
+  }, [phrases.length]);
 
   const images = [Image1, Image2, Image3];
   const testimonials = [
@@ -76,35 +89,13 @@ export default function App() {
               50% { border-color: transparent; }
             }
 
-            /* Typewriter text styling */
-            .typewriter-text {
+            /* Typewriter effect styling for carousel phrases */
+            .typewriter-carousel {
               display: inline-block;
               overflow: hidden;
               white-space: nowrap;
               border-right: 3px solid #fff;
               animation: typewriter 5s steps(40, end) infinite, blinkCursor 0.75s step-end infinite;
-              font-size: 1.2rem;
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-              .button-typewriter {
-                font-size: 1rem;
-                padding: 6px 12px;
-              }
-              .typewriter-text {
-                font-size: 1rem;
-              }
-            }
-
-            @media (max-width: 480px) {
-              .button-typewriter {
-                font-size: 0.9rem;
-                padding: 4px 10px;
-              }
-              .typewriter-text {
-                font-size: 0.9rem;
-              }
             }
           `}
         </style>
@@ -121,7 +112,7 @@ export default function App() {
             {/* Home Route */}
             <Route path="/" element={
               <main style={{ padding: '2rem 0' }}>
-                {/* Typewriter Effect Button */}
+                {/* Typewriter Effect Carousel Button */}
                 <button
                   className="button-typewriter"
                   style={{
@@ -139,9 +130,21 @@ export default function App() {
                     overflow: 'hidden',
                   }}
                 >
-                  <span className="typewriter-text">
-                    Unlock Your Academic Potential Today!
-                  </span>
+                  {currentTextIndex === 1 ? (
+                    <a 
+                      href="https://wa.me/+19099097204" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="typewriter-carousel" 
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                    >
+                      {phrases[currentTextIndex]}
+                    </a>
+                  ) : (
+                    <span className="typewriter-carousel">
+                      {phrases[currentTextIndex]}
+                    </span>
+                  )}
                 </button>
 
                 <Section>
@@ -154,7 +157,7 @@ export default function App() {
                     <li style={{ fontWeight: 'bold', fontStyle: 'italic' }}>Online Classes</li>
                   </ul>
                   <p>
-                    To make it easier for you to get started, I'm offering a <strong>special discount</strong> on your first session—a little boost to help you see the difference that dedicated, one-on-one support can make. My goal is to make learning accessible, reduce your stress, and help you excel in every area of your studies.
+                    To make it easier for you to get started, I'm offering a <span className="typewriter-special">special discount</span> on your first session—a little boost to help you see the difference that dedicated, one-on-one support can make. My goal is to make learning accessible, reduce your stress, and help you excel in every area of your studies.
                   </p>
                   <p>Let’s work together to build your confidence and academic skills. Don’t wait—reach out today for more details!</p>
                 </Section>
