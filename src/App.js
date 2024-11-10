@@ -1,4 +1,4 @@
- import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Section from './Section';
@@ -80,9 +80,9 @@ export default function App() {
           {`
             @keyframes typewriter {
               0% { width: 0; }
-              70% { width: 100%; } /* Typing animation complete */
-              85% { width: 100%; } /* Pause to allow reading */
-              100% { width: 0; } /* Reset typing effect */
+              70% { width: 100%; }
+              85% { width: 100%; }
+              100% { width: 0; }
             }
 
             @keyframes blinkCursor {
@@ -96,6 +96,45 @@ export default function App() {
               white-space: nowrap;
               border-right: 3px solid #fff;
               animation: typewriter 5s steps(40, end) infinite, blinkCursor 0.75s step-end infinite;
+            }
+
+            /* Base styles for button */
+            .button-typewriter {
+              display: inline-block;
+              padding: 10px 20px; /* Default padding for larger screens */
+              font-size: 1.2rem; /* Default font size */
+              font-weight: bold;
+              color: #fff;
+              background-color: #007bff;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              font-family: monospace;
+              white-space: nowrap;
+              overflow: hidden;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+              .button-typewriter {
+                padding: 8px 16px; /* Reduce padding on medium screens */
+                font-size: 1rem; /* Smaller font size on medium screens */
+              }
+
+              .typewriter-carousel {
+                font-size: 1rem; /* Adjust font size in typewriter effect */
+              }
+            }
+
+            @media (max-width: 480px) {
+              .button-typewriter {
+                padding: 6px 12px; /* Further reduce padding on small screens */
+                font-size: 0.9rem; /* Even smaller font size on small screens */
+              }
+
+              .typewriter-carousel {
+                font-size: 0.9rem; /* Adjust font size in typewriter effect */
+              }
             }
           `}
         </style>
@@ -115,20 +154,6 @@ export default function App() {
                 {/* Typewriter Effect Carousel Button */}
                 <button
                   className="button-typewriter"
-                  style={{
-                    display: 'inline-block',
-                    padding: '10px 20px', // Default padding for larger screens
-                    fontSize: '1.2rem', // Default font size
-                    fontWeight: 'bold',
-                    color: '#fff',
-                    backgroundColor: '#007bff',
-                    border: 'none',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    fontFamily: 'monospace',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                  }}
                 >
                   {currentTextIndex === 1 ? (
                     <a 
