@@ -278,6 +278,168 @@ export default function App() {
                     }}>›</button>
                   </div>
                 </Section>
+                <Section>
+  <div style={{
+    backgroundColor: '#003366',
+    color: '#ffffff',
+    padding: '2rem',
+    borderRadius: '8px',
+    marginBottom: '2rem',
+    textAlign: 'left',
+  }}>
+    <h2 style={{
+      fontSize: '1.5rem',
+      color: '#ffffff',
+      fontWeight: 'bold',
+      marginBottom: '0.5rem',
+      fontStyle: 'italic'
+    }}>
+      My Mission?
+    </h2>
+    <h1 style={{
+      fontSize: '2.5rem',
+      color: '#ff0000',
+      fontWeight: 'bold',
+      marginBottom: '1rem',
+    }}>
+      Help you achieve your academic goals
+    </h1>
+    <p style={{
+      fontSize: '1rem',
+      color: '#ffffff',
+      lineHeight: '1.6',
+    }}>
+      Whether I'm proofreading and editing, checking for plagiarism or AI content, generating citations, or writing useful Knowledge Base articles, my aim is to support students on their journey to become better academic writers.
+    </p>
+    <p style={{
+      fontSize: '1rem',
+      color: '#ffffff',
+      lineHeight: '1.6',
+      marginTop: '1rem'
+    }}>
+      I believe that every student should have the right tools for academic success. Free tools like a paraphrasing tool, grammar checker, summarizer and an AI Proofreader. I pave the way to your academic degree.
+    </p>
+  </div>
+</Section>
+<Section>
+  <div style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '2rem',
+  }}>
+    {/* Caring Support Card */}
+    <div style={{
+      backgroundColor: '#ffffff',
+      borderRadius: '8px',
+      width: '30%',
+      padding: '1.5rem',
+      textAlign: 'center',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    }}>
+      <div style={{
+        backgroundColor: '#007bff',
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '0 auto 1rem',
+      }}>
+        <i className="fas fa-headset" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+      </div>
+      <h3 style={{
+        fontSize: '1.1rem',
+        color: '#333',
+        fontWeight: 'bold',
+        margin: '0.5rem 0',
+      }}>
+        Caring support 24/7
+      </h3>
+      <p style={{
+        fontSize: '0.9rem',
+        color: '#555',
+      }}>
+        Free unlimited support
+      </p>
+    </div>
+
+    {/* Affordable Prices Card */}
+    <div style={{
+      backgroundColor: '#ffffff',
+      borderRadius: '8px',
+      width: '30%',
+      padding: '1.5rem',
+      textAlign: 'center',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    }}>
+      <div style={{
+        backgroundColor: '#ff3b3f',
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '0 auto 1rem',
+      }}>
+        <i className="fas fa-comment-dollar" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+      </div>
+      <h3 style={{
+        fontSize: '1.1rem',
+        color: '#333',
+        fontWeight: 'bold',
+        margin: '0.5rem 0',
+      }}>
+        Affordable prices
+      </h3>
+      <p style={{
+        fontSize: '0.9rem',
+        color: '#555',
+      }}>
+        Order for as low as $10/page
+      </p>
+    </div>
+
+    {/* Plagiarism-Free Guarantee Card */}
+    <div style={{
+      backgroundColor: '#ffffff',
+      borderRadius: '8px',
+      width: '30%',
+      padding: '1.5rem',
+      textAlign: 'center',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    }}>
+      <div style={{
+        backgroundColor: '#28a745',
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '0 auto 1rem',
+      }}>
+        <i className="fas fa-file-alt" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+      </div>
+      <h3 style={{
+        fontSize: '1.1rem',
+        color: '#333',
+        fontWeight: 'bold',
+        margin: '0.5rem 0',
+      }}>
+        100% Plagiarism free
+      </h3>
+      <p style={{
+        fontSize: '0.9rem',
+        color: '#555',
+      }}>
+        Unique and Authentic papers
+      </p>
+    </div>
+  </div>
+</Section>
+
 
                 <Section title="Why Choose Me?">
                   <ul style={{ paddingLeft: '1.5rem', lineHeight: '1.6' }}>
