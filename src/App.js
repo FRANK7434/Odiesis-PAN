@@ -475,9 +475,9 @@ export default function App() {
                       maxWidth: '500px', // Adjusts width for better responsiveness
                     }}>
                       <h2 style={{
-                        fontSize: '24px',
+                        fontSize: '23px',
                         fontWeight: 'bold',
-                        marginBottom: '15px',
+                        marginBottom: '14px',
                       }}>
                         Why Choose Me?
                       </h2>
