@@ -156,11 +156,11 @@ export default function App() {
                   className="button-typewriter"
                 >
                   {currentTextIndex === 1 ? (
-                    <a 
-                      href="https://wa.me/+19099097204" 
-                      target="_blank" 
+                    <a
+                      href="https://wa.me/+19099097204"
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="typewriter-carousel" 
+                      className="typewriter-carousel"
                       style={{ color: 'inherit', textDecoration: 'none' }}
                     >
                       {phrases[currentTextIndex]}
@@ -224,9 +224,9 @@ export default function App() {
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                     textAlign: 'center',
                   }}>
-                    <img 
-                      src={images[currentSlide]} 
-                      alt={`Slide ${currentSlide + 1}`} 
+                    <img
+                      src={images[currentSlide]}
+                      alt={`Slide ${currentSlide + 1}`}
                       style={{
                         width: '100%',
                         height: '100%',
@@ -279,177 +279,263 @@ export default function App() {
                   </div>
                 </Section>
                 <Section>
-  <div style={{
-    backgroundColor: '#003366',
-    color: '#ffffff',
-    padding: '2rem',
-    borderRadius: '8px',
-    marginBottom: '2rem',
-    textAlign: 'left',
-  }}>
-    <h2 style={{
-      fontSize: '1.5rem',
-      color: '#ffffff',
-      fontWeight: 'bold',
-      marginBottom: '0.5rem',
-      fontStyle: 'italic'
-    }}>
-      My Mission?
-    </h2>
-    <h1 style={{
-      fontSize: '2.5rem',
-      color: '#ff0000',
-      fontWeight: 'bold',
-      marginBottom: '1rem',
-    }}>
-      Help you achieve your academic goals
-    </h1>
-    <p style={{
-      fontSize: '1rem',
-      color: '#ffffff',
-      lineHeight: '1.6',
-    }}>
-      Whether I'm proofreading and editing, checking for plagiarism or AI content, generating citations, or writing useful Knowledge Base articles, my aim is to support students on their journey to become better academic writers.
-    </p>
-    <p style={{
-      fontSize: '1rem',
-      color: '#ffffff',
-      lineHeight: '1.6',
-      marginTop: '1rem'
-    }}>
-      I believe that every student should have the right tools for academic success. Free tools like a paraphrasing tool, grammar checker, summarizer and an AI Proofreader. I pave the way to your academic degree.
-    </p>
-  </div>
-</Section>
-<Section>
-  <div style={{
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '2rem',
-  }}>
-    {/* Caring Support Card */}
-    <div style={{
-      backgroundColor: '#ffffff',
-      borderRadius: '8px',
-      width: '30%',
-      padding: '1.5rem',
-      textAlign: 'center',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    }}>
-      <div style={{
-        backgroundColor: '#007bff',
-        borderRadius: '50%',
-        width: '50px',
-        height: '50px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '0 auto 1rem',
-      }}>
-        <i className="fas fa-headset" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
-      </div>
-      <h3 style={{
-        fontSize: '1.1rem',
-        color: '#333',
-        fontWeight: 'bold',
-        margin: '0.5rem 0',
-      }}>
-        Caring support 24/7
-      </h3>
-      <p style={{
-        fontSize: '0.9rem',
-        color: '#555',
-      }}>
-        Free unlimited support
-      </p>
-    </div>
-
-    {/* Affordable Prices Card */}
-    <div style={{
-      backgroundColor: '#ffffff',
-      borderRadius: '8px',
-      width: '30%',
-      padding: '1.5rem',
-      textAlign: 'center',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    }}>
-      <div style={{
-        backgroundColor: '#ff3b3f',
-        borderRadius: '50%',
-        width: '50px',
-        height: '50px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '0 auto 1rem',
-      }}>
-        <i className="fas fa-comment-dollar" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
-      </div>
-      <h3 style={{
-        fontSize: '1.1rem',
-        color: '#333',
-        fontWeight: 'bold',
-        margin: '0.5rem 0',
-      }}>
-        Affordable prices
-      </h3>
-      <p style={{
-        fontSize: '0.9rem',
-        color: '#555',
-      }}>
-        Order for as low as $10/page
-      </p>
-    </div>
-
-    {/* Plagiarism-Free Guarantee Card */}
-    <div style={{
-      backgroundColor: '#ffffff',
-      borderRadius: '8px',
-      width: '30%',
-      padding: '1.5rem',
-      textAlign: 'center',
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    }}>
-      <div style={{
-        backgroundColor: '#28a745',
-        borderRadius: '50%',
-        width: '50px',
-        height: '50px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '0 auto 1rem',
-      }}>
-        <i className="fas fa-file-alt" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
-      </div>
-      <h3 style={{
-        fontSize: '1.1rem',
-        color: '#333',
-        fontWeight: 'bold',
-        margin: '0.5rem 0',
-      }}>
-        100% Plagiarism free
-      </h3>
-      <p style={{
-        fontSize: '0.9rem',
-        color: '#555',
-      }}>
-        Unique and Authentic papers
-      </p>
-    </div>
-  </div>
-</Section>
-
-
-                <Section title="Why Choose Me?">
-                  <ul style={{ paddingLeft: '1.5rem', lineHeight: '1.6' }}>
-                    <li><strong>Personalized Support</strong> – I tailor my assistance to each student's unique needs, ensuring relevant and focused help.</li>
-                    <li><strong>Expert Knowledge</strong> – With expertise in essays, assignments, quizzes, exams, and online classes, I provide high-quality guidance.</li>
-                    <li><strong>Confidentiality & Integrity</strong> – Your privacy and trust are priorities, ensuring a respectful and secure experience.</li>
-                    <li><strong>Flexible Approach</strong> – I adapt to your schedule and learning pace, making it easier to balance academic responsibilities.</li>
-                    <li><strong>Student Success Focused</strong> – I'm committed to being a reliable partner in your academic journey, dedicated to helping you excel.</li>
-                  </ul>
+                  <div style={{
+                    backgroundColor: '#003366',
+                    color: '#ffffff',
+                    padding: '2rem',
+                    borderRadius: '8px',
+                    marginBottom: '2rem',
+                    textAlign: 'left',
+                  }}>
+                    <h2 style={{
+                      fontSize: '1.5rem',
+                      color: '#ffffff',
+                      fontWeight: 'bold',
+                      marginBottom: '0.5rem',
+                      fontStyle: 'italic'
+                    }}>
+                      My Mission?
+                    </h2>
+                    <h1 style={{
+                      fontSize: '2.5rem',
+                      color: '#ff0000',
+                      fontWeight: 'bold',
+                      marginBottom: '1rem',
+                    }}>
+                      Help you achieve your academic goals
+                    </h1>
+                    <p style={{
+                      fontSize: '1rem',
+                      color: '#ffffff',
+                      lineHeight: '1.6',
+                    }}>
+                      Whether I'm proofreading and editing, checking for plagiarism or AI content, generating citations, or writing useful Knowledge Base articles, my aim is to support students on their journey to become better academic writers.
+                    </p>
+                    <p style={{
+                      fontSize: '1rem',
+                      color: '#ffffff',
+                      lineHeight: '1.6',
+                      marginTop: '1rem'
+                    }}>
+                      I believe that every student should have the right tools for academic success. Free tools like a paraphrasing tool, grammar checker, summarizer and an AI Proofreader. I pave the way to your academic degree.
+                    </p>
+                  </div>
                 </Section>
+                <Section>
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    marginBottom: '2rem',
+                  }}>
+                    {/* Caring Support Card */}
+                    <div style={{
+                      backgroundColor: '#ffffff',
+                      borderRadius: '8px',
+                      width: '30%',
+                      padding: '1.5rem',
+                      textAlign: 'center',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    }}>
+                      <div style={{
+                        backgroundColor: '#007bff',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        margin: '0 auto 1rem',
+                      }}>
+                        <i className="fas fa-headset" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+                      </div>
+                      <h3 style={{
+                        fontSize: '1.1rem',
+                        color: '#333',
+                        fontWeight: 'bold',
+                        margin: '0.5rem 0',
+                      }}>
+                        Caring support 24/7
+                      </h3>
+                      <p style={{
+                        fontSize: '0.9rem',
+                        color: '#555',
+                      }}>
+                        Free unlimited support
+                      </p>
+                    </div>
+
+                    {/* Affordable Prices Card */}
+                    <div style={{
+                      backgroundColor: '#ffffff',
+                      borderRadius: '8px',
+                      width: '30%',
+                      padding: '1.5rem',
+                      textAlign: 'center',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    }}>
+                      <div style={{
+                        backgroundColor: '#ff3b3f',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        margin: '0 auto 1rem',
+                      }}>
+                        <i className="fas fa-comment-dollar" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+                      </div>
+                      <h3 style={{
+                        fontSize: '1.1rem',
+                        color: '#333',
+                        fontWeight: 'bold',
+                        margin: '0.5rem 0',
+                      }}>
+                        Affordable prices
+                      </h3>
+                      <p style={{
+                        fontSize: '0.9rem',
+                        color: '#555',
+                      }}>
+                        Order for as low as $10/page
+                      </p>
+                    </div>
+
+                    {/* Plagiarism-Free Guarantee Card */}
+                    <div style={{
+                      backgroundColor: '#ffffff',
+                      borderRadius: '8px',
+                      width: '30%',
+                      padding: '1.5rem',
+                      textAlign: 'center',
+                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    }}>
+                      <div style={{
+                        backgroundColor: '#28a745',
+                        borderRadius: '50%',
+                        width: '50px',
+                        height: '50px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        margin: '0 auto 1rem',
+                      }}>
+                        <i className="fas fa-file-alt" style={{ color: '#ffffff', fontSize: '1.5rem' }}></i>
+                      </div>
+                      <h3 style={{
+                        fontSize: '1.1rem',
+                        color: '#333',
+                        fontWeight: 'bold',
+                        margin: '0.5rem 0',
+                      }}>
+                        100% Plagiarism free
+                      </h3>
+                      <p style={{
+                        fontSize: '0.9rem',
+                        color: '#555',
+                      }}>
+                        Unique and Authentic papers
+                      </p>
+                    </div>
+                  </div>
+                </Section>
+
+
+                <Section title="">
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    flexWrap: 'wrap', // Enables wrapping for smaller screens
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    padding: '20px 0',
+                  }}>
+                    {/* Image Div */}
+                    <div style={{
+                      flex: '1',
+                      paddingRight: '20px',
+                      marginBottom: '20px',
+                      maxWidth: '300px', // Adjusts width for better responsiveness
+                    }}>
+                      <img
+                        src="https://images.pexels.com/photos/19288820/pexels-photo-19288820/free-photo-of-man-hand-on-laptop-with-cookie-coffee-and-plant-around.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Why Choose Me"
+                        style={{
+                          width: '100%',
+                          borderRadius: '10px',
+                        }}
+                      />
+                    </div>
+
+                    {/* Content Div */}
+                    <div style={{
+                      flex: '2',
+                      paddingLeft: '20px',
+                      textAlign: 'left',
+                      maxWidth: '500px', // Adjusts width for better responsiveness
+                    }}>
+                      <h2 style={{
+                        fontSize: '24px',
+                        fontWeight: 'bold',
+                        marginBottom: '15px',
+                      }}>
+                        Why Choose Me?
+                      </h2>
+                      <ul style={{
+                        listStyleType: 'none',
+                        paddingLeft: '0',
+                        lineHeight: '1.6',
+                        fontSize: '16px',
+                      }}>
+                        <li><strong>Personalized Support</strong> – I tailor my assistance to each student's unique needs, ensuring relevant and focused help.</li>
+                        <li><strong>Expert Knowledge</strong> – With expertise in essays, assignments, quizzes, exams, and online classes, I provide high-quality guidance.</li>
+                        <li><strong>Confidentiality & Integrity</strong> – Your privacy and trust are priorities, ensuring a respectful and secure experience.</li>
+                        <li><strong>Flexible Approach</strong> – I adapt to your schedule and learning pace, making it easier to balance academic responsibilities.</li>
+                        <li><strong>Student Success Focused</strong> – I'm committed to being a reliable partner in your academic journey, dedicated to helping you excel.</li>
+                      </ul>
+                      <a href="https://wa.me/+19099097204" style={{
+                        display: 'inline-block',
+                        padding: '10px 20px',
+                        backgroundColor: '#ff007f',
+                        color: 'white',
+                        textDecoration: 'none',
+                        borderRadius: '5px',
+                        fontWeight: 'bold',
+                        marginTop: '20px',
+                        fontSize: '16px',
+                      }}>
+                        Contact Us!
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Inline media queries for responsiveness */}
+                  <style>
+                    {`
+      @media (max-width: 768px) {
+        .why-choose-me-section {
+          flex-direction: column;
+        }
+        .why-choose-me-section img {
+          margin-bottom: 20px;
+        }
+      }
+      @media (max-width: 480px) {
+        .why-choose-me-section h2 {
+          font-size: 20px;
+        }
+        .why-choose-me-section ul li {
+          font-size: 14px;
+        }
+        .why-choose-me-section a {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    `}
+                  </style>
+                </Section>
+
               </main>
             } />
 
