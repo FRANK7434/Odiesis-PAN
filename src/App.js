@@ -6,11 +6,26 @@ import ContactCard from './ContactCard';
 import Footer from './Footer';
 import About from './About';
 
-// Importing images
+// // Importing images 
 import LogoBackground from './assets/images/Add a subheading.jpg';
 import Image1 from './assets/images/WhatsApp Image 2024-10-27 at 14.34.29.jpeg';
 import Image2 from './assets/images/WhatsApp Image 2024-10-27 at 14.34.34.jpeg';
 import Image3 from './assets/images/WhatsApp Image 2024-10-27 at 14.34.36.jpeg';
+import Image4 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.24.jpeg';
+import Image5 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.25 (1).jpeg';
+import Image6 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.25.jpeg';
+import Image7 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.26 (1).jpeg';
+import Image8 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.26.jpeg';
+import Image9 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.27.jpeg';
+import Image10 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.28 (1).jpeg';
+import Image11 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.28.jpeg';
+import Image12 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.29.jpeg';
+import Image13 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.30 (1).jpeg';
+import Image14 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.30.jpeg';
+import Image15 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.31.jpeg';
+import Image16 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.32 (1).jpeg';
+import Image17 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.32.jpeg';
+
 
 export default function App() {
   const [copiedText, setCopiedText] = useState(null);
@@ -29,13 +44,32 @@ export default function App() {
     return () => clearInterval(interval);
   }, [phrases.length]);
 
-  const images = [Image1, Image2, Image3];
+  //  This function helps me to fetch the images in array
+  const images = [
+    Image1, Image2, Image3, Image4, Image5, Image6, Image7,
+    Image8, Image9, Image10, Image11, Image12, Image13, 
+    Image14, Image15, Image16, Image17
+  ];
+  //  testimonials here have defined the testimonials 
   const testimonials = [
     "Great service! Really helped me improve my grades.",
     "Amazing support, highly recommended!",
-    "Professional and reliable assistance!"
+    "Professional and reliable assistance!",
+    "Quick and efficient work. Highly satisfied.",
+    "Outstanding quality of work!",
+    "My go-to service for academic support.",
+    "Affordable and trustworthy.",
+    "Prompt responses and very helpful.",
+    "I couldn't be happier with the service.",
+    "Great attention to detail in every assignment.",
+    "Exceptional support at all times.",
+    "Highly recommended for students!",
+    "Easy communication and quick turnaround.",
+    "Thanks to this service, I'm stress-free!",
+    "Saved me a lot of time and effort.",
+    "Reliable and professional every time.",
+    "Always delivers quality work!"
   ];
-
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopiedText(text);
