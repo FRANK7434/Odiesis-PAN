@@ -25,7 +25,14 @@ import Image14 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.30.jpeg'
 import Image15 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.31.jpeg';
 import Image16 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.32 (1).jpeg';
 import Image17 from './assets/images/WhatsApp Image 2024-11-09 at 10.58.32.jpeg';
-
+import Image18 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.41 (1).jpeg';
+import Image19 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.41.jpeg';
+import Image20 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.42 (1).jpeg';
+import Image21 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.42.jpeg';
+import Image22 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.43 (1).jpeg';
+import Image23 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.43 (2).jpeg';
+import Image24 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.43.jpeg';
+import Image25 from './assets/images/WhatsApp Image 2024-11-14 at 14.38.44.jpeg';
 
 export default function App() {
   const [copiedText, setCopiedText] = useState(null);
@@ -43,12 +50,32 @@ export default function App() {
 
     return () => clearInterval(interval);
   }, [phrases.length]);
-
-  //  This function helps me to fetch the images in array
   const images = [
-    Image1, Image2, Image3, Image4, Image5, Image6, Image7,
-    Image8, Image9, Image10, Image11, Image12, Image13, 
-    Image14, Image15, Image16, Image17
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+    Image10,
+    Image11,
+    Image12,
+    Image13,
+    Image14,
+    Image15,
+    Image16,
+    Image17,
+    Image18,
+    Image19,
+    Image20,
+    Image21,
+    Image22,
+    Image23,
+    Image24,
+    Image25,
   ];
   //  testimonials here have defined the testimonials 
   const testimonials = [
@@ -68,7 +95,16 @@ export default function App() {
     "Thanks to this service, I'm stress-free!",
     "Saved me a lot of time and effort.",
     "Reliable and professional every time.",
+    "Highly recommend this to everyone.",
+    "Best experience I've ever had.",
+    "Will definitely use this again.",
+    "Exceeded my expectations!",
+    "Totally worth it!",
+    "Exceptional quality and service.",
+    "The attention to detail is stunning.",
+    "Amazing service and quality!",
     "Always delivers quality work!"
+    
   ];
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
