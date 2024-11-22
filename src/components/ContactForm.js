@@ -28,7 +28,7 @@ const ContactUs = () => {
           {/* Phone Contact */}
           <div className="flex flex-col items-center">
             <a
-              href="tel:+1234567890" // Replace with your phone number
+              href="tel:+1(909)909-7204" // Replace with your phone number
               className="text-3xl text-gray-700 hover:text-green-500 transition"
               aria-label="Call us"
             >
