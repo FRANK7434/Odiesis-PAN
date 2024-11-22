@@ -55,7 +55,7 @@ const ContactUs = () => {
           {/* WhatsApp Contact */}
           <div className="flex flex-col items-center">
             <a
-              href="https://wa.me/1234567890" // Replace with your WhatsApp number
+              href="https://wa.me/+1(909)909-7204" // Replace with your WhatsApp number
               className="text-3xl text-gray-700 hover:text-green-500 transition"
               aria-label="Chat with us on WhatsApp"
             >
