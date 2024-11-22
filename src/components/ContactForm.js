@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { FaPhone, FaWhatsapp, FaEnvelope, FaDiscord, FaClipboard, FaCheck } from 'react-icons/fa';
 
@@ -28,7 +29,7 @@ const ContactUs = () => {
           {/* Phone Contact */}
           <div className="flex flex-col items-center">
             <a
-              href="tel:+1(909)909-7204" // Replace with your phone number
+              href="tel:+19099097204" // Replace with your phone number
               className="text-3xl text-gray-700 hover:text-green-500 transition"
               aria-label="Call us"
             >
@@ -55,7 +56,7 @@ const ContactUs = () => {
           {/* WhatsApp Contact */}
           <div className="flex flex-col items-center">
             <a
-              href="https://wa.me/+1(909)909-7204" // Replace with your WhatsApp number
+              href="https://wa.me/+19099097204" // Replace with your WhatsApp number
               className="text-3xl text-gray-700 hover:text-green-500 transition"
               aria-label="Chat with us on WhatsApp"
             >
@@ -70,7 +71,7 @@ const ContactUs = () => {
                 +1 (909) 909-7204
               </a>
               <button
-                onClick={() => copyToClipboard('+1 (909) 909-7204',"whatsapp")} // Replace with your WhatsApp number
+                onClick={() => copyToClipboard('+1(909)909-7204',"whatsapp")} // Replace with your WhatsApp number
                 className="text-gray-700 hover:text-green-500"
                 aria-label="Copy WhatsApp number"
               >
