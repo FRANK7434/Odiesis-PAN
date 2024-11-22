@@ -65,7 +65,7 @@ const ContactUs = () => {
             <p className="mt-2 text-gray-600">WhatsApp</p>
             <div className="flex items-center space-x-2">
               <a
-                href="https://wa.me/+1(909)909-7204" // Replace with your WhatsApp number
+                href="https://wa.me/+19099097204" // Replace with your WhatsApp number
                 className="text-gray-700 hover:text-green-500 transition"
               >
                 +1 (909) 909-7204
